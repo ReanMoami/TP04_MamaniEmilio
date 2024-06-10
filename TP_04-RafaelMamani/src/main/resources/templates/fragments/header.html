@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<body>
+
+<header data-th-fragment="Header" class="p-3 bg-dark text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+         	<img src="/imagen/Logo.png" alt="icono" width="150" class="d-inline-block align-text-middle">
+			Facultad de Ingenieria UNJu - 52 Años Educando 
+         </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+        </form>
+
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2">Ingresar</button>
+          <button type="button" class="btn btn-warning">Registrar</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Talleres</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Clases</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Formularios
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/formularioAlumnos">ALUMNO</a></li>
+            <li><a class="dropdown-item" href="/formularioCarreras">CARRERA</a></li>
+            <li><a class="dropdown-item" href="/formularioDocentes">DOCENTE</a></li>
+            <li><a class="dropdown-item" href="/formularioMaterias">MATERIA</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div data-th-fragment="Carusel" id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <center>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/imagen/Unju_1.jpg" class="d-block w-50" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="/imagen/Unju_2.jpg" class="d-block w-50" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="/imagen/Unju_3.jpg" class="d-block w-50" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+  </center>
+</div>
+
+<aside data-th-fragment="Aside" class="list-group " >
+  <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
+    <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+      <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+      <span class="fs-5 fw-semibold">Collapsible</span>
+    </a>
+    <ul class="list-unstyled ps-0">
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
+          Home
+        </button>
+        <div class="collapse" id="home-collapse" style="">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-dark rounded">Overview</a></li>
+            <li><a href="#" class="link-dark rounded">Updates</a></li>
+            <li><a href="#" class="link-dark rounded">Reports</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+          Dashboard
+        </button>
+        <div class="collapse" id="dashboard-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-dark rounded">Overview</a></li>
+            <li><a href="#" class="link-dark rounded">Weekly</a></li>
+            <li><a href="#" class="link-dark rounded">Monthly</a></li>
+            <li><a href="#" class="link-dark rounded">Annually</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+          Orders
+        </button>
+        <div class="collapse" id="orders-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-dark rounded">New</a></li>
+            <li><a href="#" class="link-dark rounded">Processed</a></li>
+            <li><a href="#" class="link-dark rounded">Shipped</a></li>
+            <li><a href="#" class="link-dark rounded">Returned</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="border-top my-3"></li>
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+          Account
+        </button>
+        <div class="collapse" id="account-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-dark rounded">New...</a></li>
+            <li><a href="#" class="link-dark rounded">Profile</a></li>
+            <li><a href="#" class="link-dark rounded">Settings</a></li>
+            <li><a href="#" class="link-dark rounded">Sign out</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</aside>
+
+<div data-th-fragment="Contenido" class="row">
+    <section id="facultad">
+        <h3>Facultad de Ingeniería UNJu - Jujuy</h3>
+        <p>La Facultad de Ingeniería de la Universidad Nacional de Jujuy (UNJu) es una institución dedicada a la formación académica en diversas disciplinas de ingeniería. Fundada en [año de fundación], se destaca por [características destacadas]. Ofrece programas de estudio de grado y posgrado, así como también realiza investigaciones en áreas clave de la ingeniería.</p>
+    </section>
+
+    <section id="noticias-recientes">
+		<h3>Noticias Recientes</h3>
+    <article>
+        <h4>Charla sobre Computación de Alto Rendimiento y Biometría</h4>
+        <p>Se llevó a cabo una charla dirigida a estudiantes avanzados sobre estos temas interesantes.</p>
+    </article>
+    <article>
+        <h4>Convocatoria “Beca UNISA”</h4>
+        <p>La Università degli Studi di Salerno ofrece becas en maestrías en ingeniería para el próximo año académico.</p>
+    </article>
+    <article>
+        <h4>Encuentros de Talleres de Capacitación en Autocuidado y Emociones</h4>
+        <p>No docentes de la FI UNJu participaron en estos encuentros.</p>
+    </article>
+    <article>
+        <h4>Curso de Posgrado “Fisicoquímica”</h4>
+        <p>Ofrecido como parte de la Especialización en Enseñanza de las Ciencias Exactas y Naturales.</p>
+    </article>
+    <article>
+        <h4>Reunión Informativa IngeniaVoz</h4>
+        <p>Convocatoria para estudiantes del CADI-CAEDI 2024.</p>
+    </article>
+    <article>
+        <h4>52° Aniversario de la Facultad de Ingeniería</h4>
+        <p>Celebración del aniversario de la Facultad de Ingeniería.</p>
+    </article>
+    </section>
+</div>
+
+<footer data-th-fragment="Footer" class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+    </ul>
+    <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
+  </footer>S
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
