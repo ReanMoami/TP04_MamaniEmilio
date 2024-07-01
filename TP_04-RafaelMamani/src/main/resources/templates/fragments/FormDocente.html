@@ -8,14 +8,15 @@
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-<div class="container" style="background-color:#FF5733;">
 <header data-th-replace="~{fragments/header::Header}">
 	</header>
 		<header>
 	  	<div data-th-replace="~{fragments/header::Nav}"></div>    
 		</header>
+<div  style="background-color:#FF5733;">
+
 	
-	<section class="intro">
+	<section class="container">
 	  <div class="bg-image h-50">
 	    <div class="mask d-flex align-items-center h-50">
 	      <div class="container">
@@ -36,7 +37,11 @@
 	                        <input type="text" id="legajo" class="form-control" data-th-field="*{legajo}" data-th-readonly="${band}" required/>
 	                      	<label class="form-label" for="+legajo">Legajo</label>
 	                      </div>
-						
+						<div class="form-outline mb-4">
+	                        
+	                        <input type="number" id="dni" class="form-control" data-th-field="*{dni}" required/>
+	                      	<label class="form-label" for="+dni">DNI</label>
+	                      </div>
 						<div class="form-outline mb-4">
 	                        <input type="text" id="nombre" class="form-control" required data-th-field="*{nombre}"/>
 	                        <label class="form-label" for="nombre">Nombre</label>
@@ -52,11 +57,11 @@
 	                        <input type="number" id="telefono" class="form-control" data-th-field="*{telefono}" required/>
 	                        <label class="form-label" for="telefono">Numero de telefono</label>
 	                      </div>
-	
-	                      <div class="form-outline mb-4">
+						<div class="form-outline mb-4">
 	                        <input type="email" id="correo" class="form-control" data-th-field="*{gmail}" required/>
 	                        <label class="form-label" for="correo">Correo</label>
 	                      </div>
+	
 	
 	                      <div class="d-flex justify-content-end pt-1 mb-4">
 	                        <button type="submit" class="btn btn-custom btn-outline-light btn-rounded ">Guardar Docente</button>
@@ -75,10 +80,11 @@
 	  </div>
 	</section>
 	
-	<footer>
-			<div data-th-replace="~{fragments/header::Footer}"></div>
-		</footer>
+
 		</div>
+			<footer>
+			<div data-th-replace="~{fragments/header::Footer}"></div>
+		</footer>s
 	<script src="https://kit.fontawesome.com/dcfd8ac41e.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

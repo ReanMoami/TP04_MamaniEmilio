@@ -70,7 +70,7 @@ public class AlumnosController {
 	@GetMapping("/alumnos")
 	public ModelAndView showAlumnoss() {
 		//mostrar el listado
-		ModelAndView modelView = new ModelAndView("listaAlumnos");
+		ModelAndView modelView = new ModelAndView("/fragments/listaAlumnos");
 		modelView.addObject("listadoAlumnos", ListadoAlumnos.listarAlumnos());	
 		return modelView;		
 	}

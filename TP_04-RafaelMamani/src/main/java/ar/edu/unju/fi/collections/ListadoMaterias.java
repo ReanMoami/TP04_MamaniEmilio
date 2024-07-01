@@ -20,10 +20,17 @@ public class ListadoMaterias {
 	}
 	
 	public static void agregarMaterias(Materias materia) {
+		materia.setEstado(true);
+		//materia.setDocente("Pedro");
+		//materia.setCarrera("Ingeniaria");
+		
 		materias.add(materia);
 	}
 	
 	public static void modificarMaterias(Materias materiaModificado) {
+		materiaModificado.setEstado(true);
+		//materiaModificado.setDocente("Pedro");
+		//materiaModificado.setCarrera("Ingeniaria");
 		for (int i = 0; i < materias.size(); i++){
 			Materias materia = materias.get(i);
 			if (materia.getCod().equals(materiaModificado.getCod())) {

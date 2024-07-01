@@ -8,13 +8,13 @@
 <title>Listado Docente</title>
 </head>
 <body>
-	<div class="container" style="background-color:#FF5733;">
-	<header data-th-replace="~{fragments/header::Header}">
+<header data-th-replace="~{fragments/header::Header}">
 	</header>
 	<header>
 	  	<div data-th-replace="~{fragments/header::Nav}"></div>    
 		</header>
-		
+	<div style="background-color:#FF5733;">
+	<div class="container" >
 	<div class="container" style="padding-top: 3rem; padding-bottom: 3rem">
 	<div class="table-responsive">
 <table class="table table-striped">
@@ -24,6 +24,9 @@
 	      <th scope="col">Nombre</th>
 	      <th scope="col">Curso</th>
 	      <th scope="col">Carga Horaria</th>
+	      <th scope="col">Docente</th>
+	      <th scope="col">Estado</th>
+	      <th scope="col">Carrera</th>
 	      <th scope="col">Edición</th>
 	    </tr>
 	  </thead>
@@ -33,6 +36,9 @@
 	      <td data-th-text="${materias.nombres}"></td>
 	      <td data-th-text="${materias.curso}"></td>
 	      <td data-th-text="${materias.cantHoras}"></td>
+	      <td data-th-text="${materias.docente.Apellido}"></td>
+	      <td data-th-text="${materias.estado}"></td>
+	      <td data-th-text="${materias.carrera.nombre}"></td>
 
 	      <td>
 	      	<a data-th-href="@{'/modificarMaterias/'+${materias.cod}}" class="btn btn-warning" >Modificar</a>
@@ -43,11 +49,12 @@
 		</table>
 	</div>
 	</div>
-	
-	<footer>
+	</div>
+
+		</div>
+			<footer>
 			<div data-th-replace="~{fragments/header::Footer}"></div>
 		</footer>
-		</div>
 	<script src="https://kit.fontawesome.com/dcfd8ac41e.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

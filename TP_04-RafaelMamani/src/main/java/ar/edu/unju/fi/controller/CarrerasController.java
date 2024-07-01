@@ -30,7 +30,7 @@ public class CarrerasController {
 		ListadoCarreras.agregarCarreras(carreraParaGuardar);
 		ModelAndView modelView = new ModelAndView("/fragments/listaCarreras");
 		modelView.addObject("listadoCarreras", ListadoCarreras.listarCarreras());	
-		
+
 		return modelView;		
 	}
 	
@@ -55,7 +55,7 @@ public class CarrerasController {
 
 	    ModelAndView modelView = new ModelAndView("/fragments/FormCarrera");			
 	    modelView.addObject("nuevaCarreras", carreraModificada);
-	    modelView.addObject("band", true);
+	    modelView.addObject("estado", true);
 	    
 	    return modelView;
 	}

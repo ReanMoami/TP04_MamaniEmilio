@@ -47,7 +47,7 @@ public class DocentesController {
 		
 		//mostrar el nuevo listado
 		ModelAndView modelView = new ModelAndView("/fragments/listaDocentes");
-		modelView.addObject("listadoDocentess", ListadoDocentes.listarDocentes());	
+		modelView.addObject("listadoDocentes", ListadoDocentes.listarDocentes());	
 		
 		return modelView;		
 		}
@@ -78,7 +78,7 @@ public class DocentesController {
 	@GetMapping("/docentes")
 	public ModelAndView mostrarDocentess() {
 		//mostrar el listado
-		ModelAndView modelView = new ModelAndView("/fragments/listaDocentess");
+		ModelAndView modelView = new ModelAndView("/fragments/listaDocentes");
 		modelView.addObject("listadoDocentes", ListadoDocentes.listarDocentes());	
 		return modelView;		
 	}

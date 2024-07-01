@@ -9,7 +9,9 @@ public class Materias {
 	private boolean estado;
     private int cantHoras;
     private Carreras carrera;
-    private Docentes docente;
+    private Docentes docente;;
+    //private String carrera;
+    //private String docente;
 	public String getCod() {
 		return cod;
 	}
@@ -40,6 +42,7 @@ public class Materias {
 	public void setCantHoras(int cantHoras) {
 		this.cantHoras = cantHoras;
 	}
+	
 	public Carreras getCarrera() {
 		return carrera;
 	}
@@ -52,8 +55,38 @@ public class Materias {
 	public void setDocente(Docentes docente) {
 		this.docente = docente;
 	}
+	
 	public Materias(String cod, String nombres, String curso, boolean estado, int cantHoras, Carreras carrera,
 			Docentes docente) {
+		super();
+		this.cod = cod;
+		this.nombres = nombres;
+		this.curso = curso;
+		this.estado = estado;
+		this.cantHoras = cantHoras;
+		//this.carrera = carrera;
+		//this.docente = docente;
+	}
+	
+	public Materias() {
+		super();
+	}
+	/**
+	public String getCarrera() {
+		return carrera;
+	}
+	public void setCarrera(String carrera) {
+		this.carrera = carrera;
+	}
+	
+	public String getDocente() {
+		return docente;
+	}
+	public void setDocente(String docente) {
+		this.docente = docente;
+	}
+	public Materias(String cod, String nombres, String curso, boolean estado, int cantHoras, String carrera,
+			String docente) {
 		super();
 		this.cod = cod;
 		this.nombres = nombres;
@@ -63,8 +96,17 @@ public class Materias {
 		this.carrera = carrera;
 		this.docente = docente;
 	}
-	public Materias() {
-		super();
-	}
     
+	public Materias(String cod, String nombres, String curso, boolean estado, int cantHoras, Carreras carerra,
+			String docente) {
+		super();
+		this.cod = cod;
+		this.nombres = nombres;
+		this.curso = curso;
+		this.estado = estado;
+		this.cantHoras = cantHoras;
+		this.carrera = carerra;
+		this.docente = docente;
+	}
+	**/
 }

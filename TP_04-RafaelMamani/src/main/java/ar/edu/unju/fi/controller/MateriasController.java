@@ -25,12 +25,14 @@ public class MateriasController {
 		modelView.addObject("nuevaMaterias", nuevaMaterias);
 		modelView.addObject("listadoDocentes", ListadoDocentes.listarDocentes());
 		modelView.addObject("listadoCarreras", ListadoCarreras.listarCarreras());
-		modelView.addObject("band",false);
+		modelView.addObject("estado",false);
         return modelView;
     }
 	
 	@PostMapping("/guardarMaterias")
 	public ModelAndView saveMaterias(@ModelAttribute("nuevaMaterias") Materias materiaAGuardar) {
+		materiaAGuardar.setCarrera(ListadoCarreras.buscarCarrerasPorCod(materiaAGuardar.getCarrera().getCod()));
+		materiaAGuardar.setDocente(ListadoDocentes.buscarDocentesPorLegajo(materiaAGuardar.getDocente().getLegajo()));
 		ListadoMaterias.agregarMaterias(materiaAGuardar);
 		//mostrar el listado
 		ModelAndView modelView = new ModelAndView("/fragments/listaMaterias");
@@ -38,8 +40,8 @@ public class MateriasController {
 		return modelView;	
 	}
 	
-	@GetMapping("/borrarMaterias/{codigo}")
-	public ModelAndView deleteMateriasDelListado(@PathVariable(name="codigo") String codigo) {
+	@GetMapping("/borrarMaterias/{cod}")
+	public ModelAndView deleteMateriasDelListado(@PathVariable(name="cod") String codigo) {
 		//borrar
 		ListadoMaterias.eliminarMaterias(codigo);
 		//mostrar el nuevo listado
@@ -48,17 +50,17 @@ public class MateriasController {
 		return modelView;		
 	}
 	
-	@GetMapping("/modificarMaterias/{codigo}")
+	@GetMapping("/modificarMaterias/{cod}")
 	public ModelAndView editmateria(@PathVariable(name="cod") String cod) {
 		//seleccionar el docente para modificar
 		Materias materiaAModificar = ListadoMaterias.buscarMateriasPorCod(cod);
 		
 		//mostrar el formulario de modificacion
-		ModelAndView modelView = new ModelAndView("/fragments/FormMaterias");
+		ModelAndView modelView = new ModelAndView("/fragments/FormMateria");
 		modelView.addObject("nuevaMaterias", materiaAModificar);	
 		modelView.addObject("listadoDocentes", ListadoDocentes.listarDocentes());
 		modelView.addObject("listadoCarreras", ListadoCarreras.listarCarreras());
-		modelView.addObject("band", true);
+		modelView.addObject("estado", true);
 		return modelView;		
 		}
 	

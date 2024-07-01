@@ -7,12 +7,13 @@
 
 <title>Listado Carreras</title>
 </head>
-<body style="background-color:#FF5733;">
-	<div>
-	
-	<header>
+<body >
+<header data-th-replace="~{fragments/header::Header}">
+	</header>
+		<header>
 	  	<div data-th-replace="~{fragments/header::Nav}"></div>    
-		</header>
+</header>
+	<div style="background-color:#FF5733;">
 		
 	<div class="container" style="padding-top: 3rem; padding-bottom: 3rem">
 	<div class="table-responsive">
@@ -42,10 +43,10 @@
 	</div>
 	</div>
 	
-	<footer>
+	</div>
+		<footer>
 			<div data-th-replace="~{fragments/header::Footer}"></div>
 		</footer>
-	</div>
 	<script src="https://kit.fontawesome.com/dcfd8ac41e.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

@@ -20,14 +20,16 @@ public class ListadoCarreras {
 	}
 	
 	public static void agregarCarreras(Carreras carrera) {
+		carrera.setEstado(true);
 		carreras.add(carrera);
 	}
 	
-	public static void modificarCarreras(Carreras carreraModificado) {
+	public static void modificarCarreras(Carreras carreraModificada) {
+		carreraModificada.setEstado(true);
 		for (int i = 0; i < carreras.size(); i++){
 			Carreras carrera = carreras.get(i);
-			if (carrera.getCod().equals(carreraModificado.getCod())) {
-				carreras.set(i, carreraModificado);
+			if (carrera.getCod().equals(carreraModificada.getCod())) {
+				carreras.set(i, carreraModificada);
 				break;
 			}
 		}
